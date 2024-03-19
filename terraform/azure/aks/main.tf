@@ -18,6 +18,8 @@ resource "azurerm_kubernetes_cluster" "current" {
     type = "SystemAssigned"
   }
 
-  tags = var.cluster_tags
+  tags = merge(var.cluster_tags, {
+    yor_trace = "cd7adfeb-26d0-481a-a431-6b33e3ee84d4"
+  })
 
 }

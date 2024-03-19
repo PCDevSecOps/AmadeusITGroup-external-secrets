@@ -39,4 +39,7 @@ resource "azurerm_key_vault" "current" {
     ]
 
   }
+  tags = {
+    yor_trace = "8a3f1e80-f5a3-4982-b03f-7fbcd4603f72"
+  }
 }
