@@ -60,6 +60,9 @@ resource "aws_iam_role" "eso-e2e-irsa" {
       ]
     })
   }
+  tags = {
+    yor_trace = "b2e396d2-2b29-40b7-9749-f8e0105fbe7f"
+  }
 }
 
 resource "null_resource" "apply_sa" {

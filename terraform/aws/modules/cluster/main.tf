@@ -59,7 +59,9 @@ module "eks" {
     }
   }
 
-  tags = local.tags
+  tags = merge(local.tags, {
+    yor_trace = "ca72677d-f7e4-46c4-b85d-50688ad3f3bb"
+  })
 }
 
 ################################################################################
@@ -95,7 +97,9 @@ module "vpc" {
     "kubernetes.io/role/internal-elb"     = 1
   }
 
-  tags = local.tags
+  tags = merge(local.tags, {
+    yor_trace = "be5c5be8-953c-41ed-9d87-6757c2f4a50f"
+  })
 }
 
 resource "aws_security_group" "additional" {
@@ -141,5 +145,7 @@ resource "aws_security_group" "additional" {
   }
 
 
-  tags = local.tags
+  tags = merge(local.tags, {
+    yor_trace = "566edb5a-9a1f-4546-b337-eaafd2822eb0"
+  })
 }
